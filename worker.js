@@ -5,7 +5,7 @@ require('worker_threads').parentPort.on('message', (msg) => {
     const sock = new Socket({ fd : msg.duplex_fd, readable : true, writable : true, allowHalfOpen : true });  
 
     sock.end("Hello, World", () => {
-        sock.destroy();
+        // sock.destroy();
     });
 })
 
